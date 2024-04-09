@@ -1,0 +1,27 @@
+abstract factory(hà máy trừu tượng)
+-cung cấp 1 giao diện đẻ tạo các họ đối tượng liên quan hoặc phụ thuộc mà không chỉ định các lớp cụ thể
+-phân cấp gói gọn nhiều nền tảng để xây dựng 1 bộ sp (để thay thế #ifdef..vd 1 chương trình muốn chạy trên window và linux thì phả dùng #ifdef window... #ifdef linux... #endif)
+- không dùng new để tạo đối tương
+
+Lợi ích của Abstract Factory Pattern là gì?
+
+    Các lợi ích của Factory Pattern cũng tương tự như Factory Method Pattern như: cung cấp hướng tiếp cận với Interface thay thì các implement, che giấu sự phức tạp của việc khởi tạo các đối tượng với người dùng (client), độc lập giữa việc khởi tạo đối tượng và hệ thống sử dụng, …
+    Giúp tránh được việc sử dụng điều kiện logic bên trong Factory Pattern.
+     Khi một Factory Method lớn (có quá nhiều sử lý if-else hay switch-case), chúng ta nên sử dụng theo mô hình Abstract Factory để dễ quản lý hơn (cách phân chia có thể là gom nhóm các sub-class cùng loại vào một Factory).
+    Abstract Factory Pattern là factory của các factory, có thể dễ dạng mở rộng để chứa thêm các factory và các sub-class khác.
+    Dễ dàng xây dựng một hệ thống đóng gói (encapsulate): sử dụng được với nhiều nhóm đối tượng (factory) và tạo nhiều product khác nhau.
+
+
+    -triển khai
+    + tạo interface các part (button, checkbox...)
+    + implement các part tương ứng với interface trên (winButton,winCheckbox, LixButton,LixCheckbox)
+    + tạo interface factory chứa các phương thức để tạo button và checkbox
+    + implement các factory tương ứng (winfactory,lixfactory win thì sẽ sử dụng các part ở win, lix sử dụng các part pử linux
+    + tạo giao diện tương tác, người dùng chỉ tương tác lớp này 
+      .Private factory *Factory
+      . public tạo contructtor để nhập factory khi khởi tạo 
+       client(factory *f)
+       {
+       Factory=f;
+       }
+       . Khi khởi tạo người đùng sẽ truyền vào winfactory hoặc lixfactory

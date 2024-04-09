@@ -1,0 +1,19 @@
+adapter là một mẫu thiết kế cấu trúc cho phép các đối tượng có giao diện không tương thích cộng tác với nhau.
+
+Quy tắc của ngón tay cái
+Adapter làm cho mọi thứ hoạt động sau khi chúng được thiết kế; 
+Bridge làm cho chúng hoạt động trước khi chúng hoạt động.
+
+Bridge được thiết kế trước để cho phép trừu tượng hóa và triển khai thay đổi độc lập. 
+Adapter được trang bị thêm để làm cho các lớp không liên quan hoạt động cùng nhau.
+
+Adapter cung cấp một giao diện khác cho chủ đề của nó.
+ Proxy cung cấp giao diện tương tự. 
+ Decorator cung cấp một giao diện nâng cao.
+
+Adapter có nghĩa là thay đổi giao diện của một đối tượng hiện có.
+ Decorator tăng cường đối tượng khác mà không thay đổi giao diện của nó. Do đó, Decorator minh bạch hơn đối với ứng dụng so với Adapter. 
+ Do đó, Decorator hỗ trợ bố cục đệ quy, điều không thể thực hiện được với Adapter thuần túy.
+
+Proxy xác định giao diện mới, trong khi Adapter sử dụng lại giao diện cũ. 
+Hãy nhớ rằng Adapter làm cho hai giao diện hiện có hoạt động cùng nhau thay vì xác định một giao diện hoàn toàn mới.

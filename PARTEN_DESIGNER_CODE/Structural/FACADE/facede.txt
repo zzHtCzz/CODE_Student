@@ -1,0 +1,15 @@
+là một mẫu thiết kế cấu trúc cung cấp giao diện đơn giản hóa cho thư viện, khung hoặc bất kỳ tập hợp lớp phức tạp nào khác.
+
+Vấn đề
+Hãy tưởng tượng rằng bạn phải làm cho mã của mình hoạt động với một tập hợp rộng các đối tượng thuộc về một thư viện hoặc khuôn khổ phức tạp. 
+Thông thường, bạn cần khởi tạo tất cả các đối tượng đó, theo dõi các phụ thuộc, thực thi các phương thức theo đúng thứ tự, v.v.
+Do đó, logic nghiệp vụ của các lớp của bạn sẽ được kết hợp chặt chẽ với các chi tiết triển khai của các lớp bên thứ 3, khiến cho việc hiểu và bảo trì trở nên khó khăn.
+
+Giai pháp
+Mặt tiền là một lớp cung cấp giao diện đơn giản cho một hệ thống con phức tạp chứa nhiều bộ phận chuyển động.
+Mặt tiền có thể cung cấp chức năng hạn chế so với làm việc trực tiếp với hệ thống con. Tuy nhiên, nó chỉ bao gồm những tính năng mà khách hàng thực sự quan tâm.
+Có một mặt tiền rất tiện lợi khi bạn cần tích hợp ứng dụng của mình với một thư viện phức tạp có hàng tá tính năng, nhưng bạn chỉ cần một chút chức năng của nó.
+
+Chẳng hạn, một ứng dụng tải các video ngắn vui nhộn về mèo lên mạng xã hội có thể sử dụng thư viện chuyển đổi video chuyên nghiệp.
+ Tuy nhiên, tất cả những gì nó thực sự cần là một lớp với một phương thức duy nhất encode(filename, format). 
+ Sau khi tạo một lớp như vậy và kết nối nó với thư viện chuyển đổi video, bạn sẽ có mặt tiền đầu tiên của mình.

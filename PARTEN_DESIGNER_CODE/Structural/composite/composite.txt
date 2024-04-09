@@ -1,0 +1,2 @@
+Sắp xếp các đối tượng thành cấu trúc cây để thể hiện cấu trúc phân cấp toàn phần. 
+Composite cho phép khách hàng xử lý các đối tượng riêng lẻ và thành phần của các đối tượng một cách thống nhất.

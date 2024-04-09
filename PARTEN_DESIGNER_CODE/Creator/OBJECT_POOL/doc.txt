@@ -1,0 +1,21 @@
+Object Pool Pattern là một trong những Creational pattern. Nó không nằm trong danh sách các Pattern được giới thiệu bởi GoF.
+Object Pool Pattern cung cấp một kỹ thuật để tái sử dụng objects thay vì khởi tạo không kiểm soát.
+Ý tưởng của Object Pooling là: chúng ta dùng Object Pool Pattern quản lý một tập hợp các objects mà sẽ được tái sử dụng trong chương trình. 
+Khi client cần sử dụng object, thay vì tạo ra một đối tượng mới thì client chỉ cần đơn giản yêu cầu Object pool lấy một đối tượng đã có sẵn trong object pool. 
+Sau khi object được sử dụng nó sẽ không hủy mà sẽ được trả về pool cho client khác sử dụng. 
+Nếu tất cả các object trong pool được sử dụng thì client phải chờ cho tới khi object được trả về pool.
+
+Object pool thông thường hoạt động theo kiểu: tự tạo đối tượng mới nếu chưa có sẵn hoặc khởi tạo trước 1 object pool chứa một số đối tượng hạn chế trong đó.
+
+Lợi ích của Object Pool Pattern là gì?
+    Tăng hiệu suất của ứng dụng.
+    Hiệu quả trong một vài tình huống mà tốc độ khởi tạo một object là cao.
+    Quản lý các kết nối và cung cấp một cách để tái sử dụng và chia sẻ chúng.
+    Có thể giới hạn số lượng tối đa các đối tượng có thể được tạo ra.
+
+Objects pool được sử dụng khi:
+
+    Khi cần tạo và hủy một số lượng lớn các đối tượng trong thời gian ngắn, liên tục.
+    Khi cần sử dụng các object tương tự thay vì khởi tạo một object mới không có kiểm soát.
+    Các đối tượng tốn nhiều chi phí để tạo ra.
+    Khi có một số client cần cùng một tài nguyên tại các thời điểm khác nhau.

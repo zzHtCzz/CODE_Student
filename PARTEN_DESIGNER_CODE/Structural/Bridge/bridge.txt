@@ -1,0 +1,3 @@
+Bridge là một mẫu thiết kế cấu trúc cho phép bạn chia một lớp lớn hoặc một tập hợp các lớp có liên quan chặt chẽ thành hai hệ thống phân cấp riêng biệt—trừu tượng hóa 
+và triển khai—có thể được phát triển độc lập với nhau.
+
